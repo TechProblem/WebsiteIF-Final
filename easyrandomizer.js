@@ -1,12 +1,13 @@
-const glob = require('glob');
-const path = require('path');
+const images = [
+    { src: 'EasyImages/gorilla.jpg'},
+    { src: 'EasyImages/sunrise.jpeg'},
+    { src: 'EasyImages/cloudless_sunset.jpg'}
+];
 
-const folderPath = './EasyImages';
+function loadRandomImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const selectedImage = images[randomIndex];
 
-glob(`${folderPath}/*`, (err, files) => {
-  if (err) {
-    console.error('Error reading directory:', err);
-    return;
-  }
-  console.log(files);
-});
+    document.getElementById('question-image').src = selectedImage.src;
+    document.getElementById('image-context').textContent = selectedImage.context;
+}

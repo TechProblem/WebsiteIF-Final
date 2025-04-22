@@ -9,3 +9,16 @@ This page describes what this quiz will contain, and what will happen after each
 CSS: home-css.css
 
 This css file gives the page a green theme while still being easily readable.
+
+
+ScoreAI.js
+
+This page includes the scoring for the quiz.
+
+easyrandomizer.js
+
+this page includes the randomization of the images presented in the quiz.
+
+easy.html/hard.html
+
+these pages include the quiz itself and its contents.

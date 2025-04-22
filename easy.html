@@ -9,6 +9,13 @@
         score = 0; // Initialize score variable
     </script>
     <script src="easyrandomizer.js"></script> <!-- Link to the JavaScript file for the easy quiz -->
+    <style>
+        img {
+    width: 30%;   /* Fixed width */
+    height: 20%;  /* Fixed height */
+    object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,6 +33,20 @@
     <h1 class="welcomeH1">Easy Quiz</h1>
     </header>
     <main>
+        <div id="quiz-container">
+            <h2 id="question-text">Is this image AI or Human?</h2>
+            <img id="question-image" src="" alt="Quiz Image">
+            <p id="image-context"></p>
+        </div>
+        
+        <button onclick="loadRandomImage()">Next Question</button>
+
+        <script>
+            window.onload = function() {
+                loadRandomImage(); // Load a random image when the page loads
+            };
+        </script>
+        
         
     </main>
 </body>
